@@ -1,11 +1,8 @@
 /*
- *  RT-Thread Wi-Fi Device
- *
- * COPYRIGHT (C) 2014 - 2015, Shanghai Real-Thread Technology Co., Ltd
- *
- *  This file is part of RT-Thread (http://www.rt-thread.org)
- *
- *  All rights reserved.
+ * File      : wlan_wiced.c
+ *             Wi-Fi common commands
+ * This file is part of RT-Thread RTOS
+ * COPYRIGHT (C) 2006 - 2016, RT-Thread Development Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -23,11 +20,16 @@
  *
  * Change Logs:
  * Date           Author       Notes
- * 2017-10-25     Murphy       the first verion
+ * 2017-11-13     Murphy       the first verion
  */
-#ifndef __WLAN_WICED_H__
-#define __WLAN_WICED_H__
 
-int wlan_wiced_init(void);
+#include <rtthread.h>
+// #include <wwd_netif.h>
 
-#endif
+extern int wifi_management_init(void);
+
+int wlan_wiced_init(void)
+{
+    wifi_management_init();
+}
+INIT_APP_EXPORT(wlan_wiced_init);
