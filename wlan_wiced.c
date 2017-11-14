@@ -24,7 +24,6 @@
  */
 
 #include <rtthread.h>
-// #include <wwd_netif.h>
 
 extern int wifi_management_init(void);
 
