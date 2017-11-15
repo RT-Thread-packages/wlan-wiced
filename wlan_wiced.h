@@ -28,6 +28,6 @@
 #ifndef __WLAN_WICED_H__
 #define __WLAN_WICED_H__
 
-int wlan_wiced_init(void);
+extern int wifi_hw_init(void);
 
 #endif
